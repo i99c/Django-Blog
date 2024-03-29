@@ -1,0 +1,31 @@
+{% load static %}
+
+{% block navbar %}
+  <div class="navbar">
+    <div class="logo">
+      <img src="{% static 'img/Game-blog-logo.png' %}" alt="Logo" />
+    </div>
+    <ul>
+      <li>
+        <a href="{% url 'blog/home' %}" class="navbar-btn">Ana Sayfa</a>
+      </li>
+      <li>
+        <a href="{% url 'blog/about' %}" class="navbar-btn">About</a>
+      </li>
+      <li>
+        <a href="#" class="navbar-btn">Oyun İncelemeleri</a>
+      </li>
+      <li>
+        <a href="#" class="navbar-btn">Oyun Haberleri</a>
+      </li>
+      <li>
+        <a href="#" class="navbar-btn">İletişim</a>
+      </li>
+    </ul>
+    <div class="icons">
+      <i class="fas fa-user" id="register-btn" style="color: #008DDA;"></i>
+      <i class="fas fa-arrow-right-from-bracket" id="login-btn" style="color: #008DDA;"></i>
+      <i class="fas fa-sign-out-alt" id="logout-btn" style="display: none; color: #008DDA;"></i>
+    </div>
+  </div>
+{% endblock %}

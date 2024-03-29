@@ -1,0 +1,52 @@
+{% load static %}
+
+<meta charset="utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="stylesheet" href="{% static 'blog/main.css' %}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tac+One&display=swap" rel="stylesheet" />
+
+{% include 'includes/_navbar.html' %}
+
+<div class="container">
+  <div class="content">
+    <div class="card">
+      <img src="{% static 'img/blog-1.jpg' %}" alt="Blog Post 1" />
+      <div class="card-body">
+        <h2 class="card-title">Türkiyede Oyun Oynamak</h2>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a fringilla tincidunt, felis nisl aliquam nisl, a luctus augue velit vel leo.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="date-posted">12 Mart 2024</div> <!-- Örnek bir tarih -->
+    </div>
+    <div class="card">
+      <img src="{% static 'img/blog-2.jpg' %}" alt="Blog Post 2" />
+      <div class="card-body">
+        <h2 class="card-title">Bilgisayar Oyunları Mı? Konsol Mu?</h2>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a fringilla tincidunt, felis nisl aliquam nisl, a luctus augue velit vel leo.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="date-posted">10 Mart 2024</div> <!-- Örnek bir tarih -->
+    </div>
+    <div class="card">
+      <img src="{% static 'img/blog-3.jpg' %}" class="w-50" alt="Blog Post 3" />
+      <div class="card-body">
+        <h2 class="card-title">Bahar İndirimlerinde Hangi Oyunlar Alınır</h2>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a fringilla tincidunt, felis nisl aliquam nisl, a luctus augue velit vel leo.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="date-posted">8 Mart 2024</div> <!-- Örnek bir tarih -->
+    </div>
+  </div>
+</div>
+
+{% include 'includes/_footer.html' %}
+
+<script>
+  // Kullanıcı oturum açıkken logout ikonunu göster
+  function showLogoutIcon() {
+    document.getElementById('logout-btn').style.display = 'inline-block'
+  }
+</script>
+
+<script src="https://kit.fontawesome.com/767955e4cb.js" crossorigin="anonymous"></script>
