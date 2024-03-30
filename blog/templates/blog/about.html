@@ -1,11 +1,7 @@
 {% extends 'blog/base.html' %}
-
-{% if title %}
-  <title>{{ title }}</title>
-{% else %}
-  <title>Django Blog About</title>
-{% endif %}
-
+{% load static %}
 {% block content %}
-  <h1>Blog About from templates</h1>
-{% endblock %}A
+  <div class="container" style="background-color: white;">
+    <h1>Blog About</h1>
+  </div>
+{% endblock %}

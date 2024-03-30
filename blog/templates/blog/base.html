@@ -1,41 +1,94 @@
 {% load static %}
 
-<meta charset="utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="stylesheet" href="{% static 'blog/main.css' %}" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="{% static 'blog/main.css' %}" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tac+One&display=swap" rel="stylesheet" />
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 {% include 'includes/_navbar.html' %}
 
 <div class="container">
-  <div class="content">
-    <div class="card">
-      <img src="{% static 'img/blog-1.jpg' %}" alt="Blog Post 1" />
-      <div class="card-body">
-        <h2 class="card-title">Türkiyede Oyun Oynamak</h2>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a fringilla tincidunt, felis nisl aliquam nisl, a luctus augue velit vel leo.</p>
-        <a href="#" class="btn">Read More</a>
-      </div>
-      <div class="date-posted">12 Mart 2024</div> <!-- Örnek bir tarih -->
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <!-- Değişiklik burada -->
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
     </div>
-    <div class="card">
-      <img src="{% static 'img/blog-2.jpg' %}" alt="Blog Post 2" />
-      <div class="card-body">
-        <h2 class="card-title">Bilgisayar Oyunları Mı? Konsol Mu?</h2>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a fringilla tincidunt, felis nisl aliquam nisl, a luctus augue velit vel leo.</p>
-        <a href="#" class="btn">Read More</a>
+    <div class="col-md-4">
+      <!-- Değişiklik burada -->
+      <div class="content-sectionw">
+        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
+          <a id="list-group" style="text-decoration: none;" href="" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom"><span class="fs-5 fw-semibold" id="gist-btn">En Son Gist</span></a>
+          <div class="list-group list-group-flush border-bottom scrollarea">
+            <a href="#" class="list-group-item list-group-item-action lh-tight" aria-current="true">
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <strong class="mb-1">Cidden, Bebeklere Nasıl Kod Yazılır Öğretmeyi Bırak... - Desphixs</strong>
+                <small>Çarşamba</small>
+              </div>
+              <div class="col-10 mb-1 small">BİR BEBEK nerd olarak, Hackers'a takıntılıydım. 1995 yapımı kült film...</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <strong class="mb-1">Bu Bir Hata Değil - Bu Bir Özellik... - Desphixs</strong>
+                <small class="text-muted">Salı</small>
+              </div>
+              <div class="col-10 mb-1 small">Kodlamayla ilgili her şey bir mucize gibi çalışır, o kelimeyi kullanmama izin ver...hahaha</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <strong class="mb-1">Büyük Bir Yazılımcı Olmak İstiyordum Ama... - Desphixs</strong>
+                <small class="text-muted">Pazartesi</small>
+              </div>
+              <div class="col-10 mb-1 small">Ailemden hiç kimse bilgisayarlar hakkında bir şey bilmiyor ve ben her zaman en büyük bilgisayar bilimcisi olmak istiyordum ve...</div>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="date-posted">10 Mart 2024</div> <!-- Örnek bir tarih -->
     </div>
-    <div class="card">
-      <img src="{% static 'img/blog-3.jpg' %}" class="w-50" alt="Blog Post 3" />
-      <div class="card-body">
-        <h2 class="card-title">Bahar İndirimlerinde Hangi Oyunlar Alınır</h2>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a fringilla tincidunt, felis nisl aliquam nisl, a luctus augue velit vel leo.</p>
-        <a href="#" class="btn">Read More</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-0">
+      <div class="content pt-4">
+        <div class="card mb-4">
+          <!-- Değişiklik burada -->
+          <img src="{% static 'img/blog-1.jpg' %}" alt="Blog Post 1" />
+          <div class="card-body">
+            <h2 class="card-title">Türkiye'de Oyun Oynamak</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a fringilla tincidunt, felis nisl aliquam nisl, a luctus augue velit vel leo.</p>
+            <a href="#" class="btn">Devamını Oku</a>
+          </div>
+          <div class="date-posted">12 Mart 2024</div>
+        </div>
+        <div class="card mb-4">
+          <!-- Değişiklik burada -->
+          <img src="{% static 'img/blog-2.jpg' %}" alt="Blog Post 2" />
+          <div class="card-body">
+            <h2 class="card-title">Bilgisayar Oyunları Mı? Konsol Mu?</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a fringilla tincidunt, felis nisl aliquam nisl, a luctus augue velit vel leo.</p>
+            <a href="#" class="btn">Devamını Oku</a>
+          </div>
+          <div class="date-posted">10 Mart 2024</div>
+        </div>
+        <div class="card mb-4">
+          <!-- Değişiklik burada -->
+          <img src="{% static 'img/blog-3.jpg' %}" class="w-50" alt="Blog Post 3" />
+          <div class="card-body">
+            <h2 class="card-title">Bahar İndirimlerinde Hangi Oyunlar Alınır</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a fringilla tincidunt, felis nisl aliquam nisl, a luctus augue velit vel leo.</p>
+            <a href="#" class="btn">Devamını Oku</a>
+          </div>
+          <div class="date-posted">8 Mart 2024</div>
+        </div>
       </div>
-      <div class="date-posted">8 Mart 2024</div> <!-- Örnek bir tarih -->
     </div>
   </div>
 </div>
@@ -48,5 +101,5 @@
     document.getElementById('logout-btn').style.display = 'inline-block'
   }
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/767955e4cb.js" crossorigin="anonymous"></script>
