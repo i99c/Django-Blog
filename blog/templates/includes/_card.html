@@ -1,0 +1,63 @@
+{% load static %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="col-md-3 ml-auto">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">En Son Gist</h5>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-10">
+                  <h6>Cidden, Bebeklere Nasıl Kod Yazılır Öğretmeyi Bırak... - Desphixs</h6>
+                  <small class="text-muted">Çarşamba</small>
+                </div>
+                <div class="col-2 text-end">
+                  <button type="button" class="btn btn-sm btn-outline-primary">Git</button>
+                </div>
+              </div>
+              <p class="small">BİR BEBEK nerd olarak, Hackers'a takıntılıydım. 1995 yapımı kült film...</p>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-10">
+                  <h6>Bu Bir Hata Değil - Bu Bir Özellik... - Desphixs</h6>
+                  <small class="text-muted">Salı</small>
+                </div>
+                <div class="col-2 text-end">
+                  <button type="button" class="btn btn-sm btn-outline-primary">Git</button>
+                </div>
+              </div>
+              <p class="small">Kodlamayla ilgili her şey bir mucize gibi çalışır, o kelimeyi kullanmama izin ver...hahaha</p>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-10">
+                  <h6>Büyük Bir Yazılımcı Olmak İstiyordum Ama... - Desphixs</h6>
+                  <small class="text-muted">Pazartesi</small>
+                </div>
+                <div class="col-2 text-end">
+                  <button type="button" class="btn btn-sm btn-outline-primary">Git</button>
+                </div>
+              </div>
+              <p class="small">Ailemden hiç kimse bilgisayarlar hakkında bir şey bilmiyor ve ben her zaman en büyük bilgisayar bilimcisi olmak istiyordum ve...</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,66 +10,6 @@ body {
     color: #444444;
 }
 
-.navbar {
-    background-color: #F3CCF3;
-    padding: 15px 30px;
-    /* Sağ ve sol boşluk arttırıldı */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.logo img {
-    width: 80px;
-}
-
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-    margin-right: -10px;
-    /* Butonlar arasındaki boşlukları arttırmak için */
-}
-
-.navbar ul li {
-    margin-right: 20px;
-}
-
-.navbar ul li:last-child {
-    margin-right: 0;
-}
-
-.navbar-btn {
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    color: #fff;
-    background: linear-gradient(87deg, #ff6b6b, #c455c1, #5a51b7);
-    background-size: 300% 300%;
-    transition: background-position 0.3s, transform 0.3s;
-    font-weight: 500;
-}
-
-.navbar-btn:hover {
-    background-position: 100% 0;
-    transform: scale(1.05);
-}
-
-.navbar-btn:active {
-    transform: scale(0.95);
-}
-
-.icons {
-    display: flex;
-    margin-left: 20px;
-    /* İkonları sağa doğru kaydır */
-}
-
-.icons i {
-    margin-left: 20px;
-    font-size: 18px;
-}
-
 /* ! Sayfa Tasarımı */
 h1,
 h2,
